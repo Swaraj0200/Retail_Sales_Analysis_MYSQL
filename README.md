@@ -30,9 +30,9 @@ customer_id	INT,
 gender	VARCHAR(15),
 age INT,
 category VARCHAR(15),	
-quantity	INT,
+quantity INT,
 price_per_unit FLOAT,	
-cogs	FLOAT,
+cogs FLOAT,
 total_sale FLOAT);
 ```
 
@@ -176,7 +176,7 @@ WHEN HOUR(sale_time) < 12 THEN 'morning'
 WHEN HOUR(sale_time) between 12 and 17 THEN 'afternoon'
 ELSE 'evening'
 END AS shift 
-FROM etail_Sales)
+FROM Retail_Sales)
 SELECT shift, count(*) AS total_orders
 FROM hourly_sale
 GROUP BY shift;
